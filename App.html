@@ -1,0 +1,189 @@
+﻿<!-- saved from url=(0059)https://quickstart.internetofthings.ibmcloud.com/iotsensor/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>IoT Sensor</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="./CSS/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./CSS/style.css" rel="stylesheet">
+</head>
+<body onload="init()">
+    <div class="outerContainer">
+        <div class="header">
+            <a class="navbar-brand" style="background-color: #efefef; padding-left: 25px; padding-right: 25px; color: #ff006e; width: 100%; "><span style="font-size:x-large"><b>IoT Sensor</b></span> <span class="pull-right" >Device Id:<span style=" text-shadow:none !important" id="deviceId"></span></span></a>
+        </div>
+    </div>
+    <div align="center" style=" padding-top:50px; color: white; height:250px; width: 100%">
+
+        <img src="./Images/conveyor.png" height="300" width="900" />
+    </div>
+
+    <div align="center" style=" padding-top:100px; color: white; height:250px; width: 100%">
+        <table>
+            <tr>
+                <td>
+                    <div class=" navy Control">
+
+                        <div>
+                            <div>
+                                <div class="carousel-top">
+                                    <h4>Rotary Speed</h4>
+                                </div>
+                                <div class="carousel-main">
+                                    <div class="readingBox">
+                                        <h1 class="readingValue" id="rotarySpeedReading">5m/s</h1>
+                                    </div>
+                                </div>
+                                <div align="center" class="caption">
+                                    <div class="readingButtons">
+                                        <button id="rotarySpeedDown" class="readingButton btn btn-lg btn-default" href="#" role="button">
+                                            -
+                                            </span>
+                                        </button>
+                                        <span style="color:White">Belt Lubricant</span>
+                                        <button id="rotarySpeedUp" class="readingButton btn btn-lg btn-default" href="#" role="button">
+                                            +
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="purple Control">
+                        <div>
+                            <div>
+                                <div class="carousel-top">
+                                    <h4>Pulley Friction</h4>
+                                </div>
+                                <div class="carousel-main">
+                                    <div class="readingBox">
+                                        <h1 class="readingValue" id="pulleyFrictionReading">5(f)</h1>
+                                    </div>
+                                </div>
+                                <div align="center" class="caption">
+                                    <div class="readingButtons">
+                                        <button id="pulleyFrictionDown" class="readingButton btn btn-lg btn-default"  href="#" role="button">
+                                            -
+                                            </span>
+                                        </button><span style="color:White">Pulley Lubricant</span>
+                                        <button id="pulleyFrictionUp" class="readingButton btn btn-lg btn-default" href="#" role="button">
+                                            +
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="blue Control">
+                        <div>
+                            <div>
+                                <div class="carousel-top">
+                                    <h4>Motor Temperature</h4>
+                                </div>
+                                <div class="carousel-main">
+                                    <div class="readingBox">
+                                        <h1 class="readingValue" id="motorTemperatureReading">25°C</h1>
+                                    </div>
+                                </div>
+                                <div align="center" class="caption">
+                                    <div class="readingButtons">
+                                        <button id="motorTemperatureDown" class="readingButton btn btn-lg btn-default"  href="#" role="button">
+                                            -
+                                            </span>
+                                        </button><span style="color:White">Motor Coolant</span>
+                                        <button id="motorTemperatureUp" class="readingButton btn btn-lg btn-default" href="#" role="button">
+                                            +
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="orange Control">
+                        <div>
+                            <div>
+                                <div class="carousel-top">
+                                    <h4>Bearing Temperature</h4>
+                                </div>
+                                <div class="carousel-main">
+                                    <div class="readingBox">
+                                        <h1 class="readingValue" id="bearingTemperatureReading">43°C</h1>
+                                    </div>
+                                </div>
+                                <div align="center" class="caption">
+                                    <div class="readingButtons">
+                                        <button id="bearingTemperatureDown" class="readingButton btn btn-lg btn-default"  href="#" role="button">
+                                            -
+                                            </span>
+                                        </button><span style="color:White">Bearing Coolant</span>
+                                        <button id="bearingTemperatureUp" class="readingButton btn btn-lg btn-default" href="#" role="button">
+                                            +
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="green Control">
+                        <div>
+                            <div>
+                                <div class="carousel-top">
+                                    <h4>Gear Vibration</h4>
+                                </div>
+                                <div class="carousel-main">
+                                    <div class="readingBox">
+                                        <h1 class="readingValue" id="gearVibrationReading">5Hz</h1>
+                                    </div>
+                                </div>
+                                <div align="center" class="caption">
+                                    <div class="readingButtons">
+                                        <button id="gearVibrationDown" class="readingButton btn btn-lg btn-default"  href="#" role="button">
+                                            -
+                                            </span>
+                                        </button><span style="color:White">Gear Position</span>
+                                        <button id="gearVibrationUp" class="readingButton btn btn-lg btn-default" href="#" role="button">
+                                            +
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./JS/jquery.js"></script>
+    <script src="./JS/jquery.mobile.custom.min.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+    <script src="./JS/mqttws31.js"></script>
+    <script src="./JS/fastclick.js"></script>
+    <script src="./JS/main.js"></script>
+    <script type="application/javascript">
+        window.addEventListener('load', function () {
+            FastClick.attach(document.body);
+        }, false);
+    </script>
+</body>
+</html>
